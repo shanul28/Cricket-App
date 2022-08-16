@@ -1,7 +1,3 @@
-![WhatsApp Image 2022-07-31 at 10 28 53 AM](https://user-images.githubusercontent.com/44204130/184974087-971a1005-96d3-4b05-a025-afea1f083ea5.jpeg)
-![WhatsApp Image 2022-07-31 at 10 27 59 AM](https://user-images.githubusercontent.com/44204130/184974095-3b5972cf-18f8-42f6-93cb-decf85bce4e0.jpeg)
-![WhatsApp Image 2022-07-30 at 11 32 34 PM](https://user-images.githubusercontent.com/44204130/184974096-3b005b4d-b2bb-4f04-ab9a-16d575193a6d.jpeg)
-![WhatsApp Image 2022-07-30 at 11 31 32 PM](https://user-images.githubusercontent.com/44204130/184974102-7c646e22-e4cb-4200-a39e-9b5926e0d0c3.jpeg)
 # Cricket-App
 This Website shows current cricket matches which are going on in the world , it shows the list of cricket players
 along with the upcoming series details.
@@ -28,5 +24,10 @@ User can also change his/her user details like username or password.
   
  * for testing Junit and Mockito has been used in backend.
  * Docker is also used for Containarization.
-   
+   ![WhatsApp Image 2022-07-30 at 11 31 32 PM](https://user-images.githubusercontent.com/44204130/184974102-7c646e22-e4cb-4200-a39e-9b5926e0d0c3.jpeg)
+   ![Screenshot (9)](https://user-images.githubusercontent.com/44204130/184974437-ca2588d9-b2de-456d-9b6d-da1259fa97af.png)
+![WhatsApp Image 2022-07-31 at 10 28 53 AM](https://user-images.githubusercontent.com/44204130/184974590-edf6acfb-2d10-4d18-a5d2-ce0db24acc03.jpeg)
+![WhatsApp Image 2022-07-31 at 10 27 59 AM](https://user-images.githubusercontent.com/44204130/184974597-82c97444-4f1a-43b0-9e9c-ea46064fb5f5.jpeg)
+![WhatsApp Image 2022-07-30 at 11 32 34 PM](https://user-images.githubusercontent.com/44204130/184974600-6e7c3c8f-60dc-4fc8-94c3-5e4bab69c8bf.jpeg)
+
    
