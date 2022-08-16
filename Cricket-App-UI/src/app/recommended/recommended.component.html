@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="f">
+<div *ngFor="let player of allPlayers">
+  <div *ngIf="(player.country=='India'||player.country=='England'||player.country=='Ireland'||player.country=='United Arab Emirates'||player.country=='	New Zealand')">
+  <div class="container"  >
+ 
+<h1 >{{player.name}}</h1>
+<hr/>
+<h3>{{player.country}}</h3>
+<button type="button" class="ml-5 btn btn-warning "[routerLink]="['/player', player.id]">View</button>
+  </div>
+<br/></div>
+</div></div>

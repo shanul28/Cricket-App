@@ -1,0 +1,11 @@
+FROM openjdk:11.0.14-jre
+#working directory inside the image
+#EXPOSE 8082
+WORKDIR usr/src
+FROM mysql:latest
+MAINTAINER shanulhuda86@gmail.com
+ENV MY_SQL_ROOT_PASSWORD root
+#jarfile in usr/src working directory
+ADD target/spring-security-jwt-example-0.0.1-SNAPSHOT.jar shanul-jwt-1.jar
+#running the jar file
+ENTRYPOINT ["java","-jar","/shanul-jwt-1.jar"]

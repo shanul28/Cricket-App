@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container">
+  <table class="table">
+      <tbody>
+        <tr>
+          <th>Name</th>
+          <td>{{playerInfo.name}}</td>
+        </tr>
+
+
+        <tr>
+          <th>Role</th>
+          <td>{{playerInfo.role}}</td>
+        </tr>
+
+        <tr>
+          <th>Batting Style</th>
+          <td>{{playerInfo.battingStyle}}</td>
+        </tr>
+
+        <tr>
+          <th>Bowling Style</th>
+          <td>{{playerInfo.bowlingStyle}}</td>
+        </tr>
+
+        <tr>
+          <th>Place of Birth</th>
+          <td>{{playerInfo.placeOfBirth}}</td>
+        </tr>
+      </tbody>
+      
+    </table>
+    
+</div>
+<div class="container">
+  <button class="btn" type="submit" (click)="onAdd()">Add to Favorites</button>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+package com.cplayer.jwt.api.service;
+
+import org.springframework.boot.test.context.SpringBootTest;
+
+
+
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public class CustomUserDetailsServiceTest {
+
+}

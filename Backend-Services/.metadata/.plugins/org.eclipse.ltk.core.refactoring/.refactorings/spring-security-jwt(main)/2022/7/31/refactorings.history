@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;spring-security-jwt(main)&apos;&#x0D;&#x0A;- Original project: &apos;spring-security-jwt(main)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     com.cplayer.jwt.api.demo.java&#x0D;&#x0A;     com.cplayer.jwt.api.demoTest.java" description="Delete elements" element1="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.cplayer.jwt.api{demoTest.java" element2="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;com.cplayer.jwt.api{demo.java" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1659198195852" subPackages="false" version="1.0"/>
+</session>

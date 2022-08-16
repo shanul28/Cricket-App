@@ -1,0 +1,5 @@
+package com.stackroute.wipro.ag.filters;
+
+public class CorsFilter {
+
+}

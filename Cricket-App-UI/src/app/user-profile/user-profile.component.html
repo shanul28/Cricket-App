@@ -1,0 +1,76 @@
+<app-header></app-header>
+
+<div class="container-xl px-4 mt-4">
+  <!-- Account page navigation-->
+
+  <div class="container">
+    <div class="col-xl-8">
+      <!-- Account details card-->
+      <div class="card mb-4">
+        
+        <div class="card-body">
+          <form [formGroup]="form" (ngSubmit)="onSave()">
+            <!-- Form Group (username)-->
+
+            <div class="mb-3">
+              <label class="small mb-1" for="inputUsername">Username</label>
+              <input
+                [(ngModel)]="credentials.userName"
+                name="userName"
+                class="form-control"
+                id="inputUsername"
+                type="text"
+                placeholder="Enter your username"
+                value="{{ username }}"
+                formControlName="userName"
+              />
+              
+            </div>
+
+            <!-- Form Group (email address)-->
+            <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress"
+                >Email address</label
+              >
+              <input
+                class="form-control"
+                id="inputEmailAddress"
+                name="email"
+                type="email"
+                placeholder="Enter your email address"
+                value="{{ userEmail }}"
+                disabled
+                
+              />
+              
+            </div>
+            <!-- Form Row-->
+            <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress">Password</label>
+              <input
+                [(ngModel)]="credentials.password"
+                name="password"
+                class="form-control"
+                id="inputEmailAddress"
+                type="password"
+                placeholder="Enter new Password"
+                value=""
+                formControlName="password"
+              />
+              
+            </div><br>
+            <!-- Save changes button-->
+            <button
+              class="btn"
+              type="submit"
+              
+            >
+              Save changes
+            </button>
+          </form>
+          <!-- {{ credentials | json }} -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

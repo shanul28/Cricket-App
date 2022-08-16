@@ -1,0 +1,92 @@
+package com.stackroute.myfavouriteservice.service;
+
+import static org.mockito.Mockito.timeout;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.stackroute.myfavouriteservice.exception.PlayerAlreadyExistsException;
+import com.stackroute.myfavouriteservice.exception.PlayerNotFoundException;
+import com.stackroute.myfavouriteservice.model.Cplayer;
+import com.stackroute.myfavouriteservice.model.User;
+import com.stackroute.myfavouriteservice.repository.FavouriteRepository;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import junit.framework.Assert;
+
+@ExtendWith(MockitoExtension.class)
+public class FavouriteServiceTest {
+    @Mock
+    private FavouriteRepository favRepository;
+
+    @InjectMocks
+    public FavouriteServiceImpl favouriteServiceImpl;
+
+    private User user;
+
+    private Cplayer cPlayer;
+
+    private List list;
+
+    @Before
+    public void setup() {
+        MockitoAnnotations.initMocks(this);
+        cPlayer = new Cplayer();
+
+        cPlayer.setPlayer("sachin");
+        cPlayer.setId("99");
+        list = new ArrayList<Cplayer>();
+        list.add(cPlayer);
+
+        user = new User();
+        user.setEmail("test@gmail.com");
+        user.setCplayerList(list);
+    }
+
+    @After
+    public void delete() {
+        user = null;
+    }
+
+    @Test
+    public void savePlayerToFavoriteListTest() throws PlayerAlreadyExistsException {
+
+        user = new User();
+        user.setEmail("test@gmail.com");
+
+        Mockito.when(favRepository.findByEmail(user.getEmail())).thenReturn(user);
+        User fetchedUser = favouriteServiceImpl.savePlayerToFavorite(cPlayer, user.getEmail());
+        Assert.assertEquals(fetchedUser, user);
+        verify(favRepository, timeout(1)).findByEmail(user.getEmail());
+        verify(favRepository, times(1)).save(user);
+    }
+
+    @Test
+    public void deletePlayerFromFavoriteListTest() throws PlayerNotFoundException {
+        Mockito.when(favRepository.findByEmail(user.getEmail())).thenReturn(user);
+        User fetchedUser = favouriteServiceImpl.deletePlayerFromFavorite(cPlayer.getPlayer(),user.getEmail());
+        Assert.assertEquals(fetchedUser, user);
+        verify(favRepository, timeout(1)).findByEmail(user.getEmail());
+        verify(favRepository, times(1)).save(user);
+
+    }
+
+    @Test
+    public void getAllFavoriteListTest() throws Exception {
+        Mockito.when(favRepository.findByEmail(user.getEmail())).thenReturn(user);
+        List fetchedList = favouriteServiceImpl.getPlayerList(user.getEmail());
+        Assert.assertEquals(fetchedList, list);
+        verify(favRepository, times(1)).findByEmail(user.getEmail());
+
+    }
+}

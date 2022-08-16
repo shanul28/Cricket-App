@@ -1,0 +1,27 @@
+.disp{
+  background-image: url("https://images.unsplash.com/photo-1625401586060-f12be3d7cc57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-color: #cccccc;
+  background-size: cover;
+ }
+
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  mat-form-field{
+    width: 400px;
+  }
+  button{
+    max-width: 400px;
+  }
+
+  input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border: 1.2px solid red;
+    
+  }

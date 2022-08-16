@@ -1,0 +1,64 @@
+<header class="p-3 bg-dark light text-white">
+  <div class="container">
+    <div
+      class="d-flex flex-wrap align-items-left justify-content-center justify-content-lg-start"
+    >
+      
+
+      <ul
+        class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 "
+      >
+        <li >
+
+          <a routerLink="/home" class="nav-link px-5 text-white">Home</a>
+        </li>
+        <li >
+          <a routerLink="/player-stats" class="nav-link px-5 text-white"
+            >
+            <!-- <i class="fa fa-bar-chart " style="font-size: 24px; color:green;"></i
+            > -->
+            
+            &nbsp;Players</a
+          >
+        </li>
+        <li ><a routerLink="/favorites" class="nav-link px-5 text-white">&nbsp;Favorites</a></li>
+        <li ><a routerLink="/recommended" class="nav-link px-5 text-white">&nbsp;Recommended</a></li>
+      </ul>
+
+
+
+      <div class="text-end">
+        
+
+          <button routerLink="/user-profile" *ngIf="loggedIn"  type="button" class="btn btn-success me-2" type="button"  >
+            {{user}}
+          </button>
+          
+        <!-- <button *ngIf="loggedIn"  type="button" class="btn btn-warning me-2" routerLink="/user-profile">
+          <a
+
+          style="text-decoration: none; color: black;"
+            >{{user}}</a
+          >
+        </button> -->
+
+        <button *ngIf="loggedIn" (click)="logoutUser()" type="button" class="btn btn-primary" routerLink="/user-login">
+          <a
+
+            style="text-decoration: none; color: white"
+            >Logout</a
+          >
+        </button>
+        <button *ngIf="!loggedIn" type="button" class="btn btn-warning" routerLink="/user-register">
+          <a
+
+            style="text-decoration: none; color: black;"
+            >Sign-up</a
+          >
+      
+        
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,106 @@
+package com.stackroute.myfavouriteservice.controller;
+
+import java.util.List;
+
+import com.stackroute.myfavouriteservice.exception.PlayerAlreadyExistsException;
+import com.stackroute.myfavouriteservice.exception.PlayerNotFoundException;
+import com.stackroute.myfavouriteservice.model.Cplayer;
+import com.stackroute.myfavouriteservice.model.User;
+import com.stackroute.myfavouriteservice.service.FavouriteService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping("/api/v1/favorite")
+public class FavoriteController {
+	
+	private ResponseEntity responseEntity;
+
+	private FavouriteService favService;
+
+	public FavoriteController() {
+		super();
+	}
+
+	@Autowired
+	public FavoriteController(FavouriteService favService) {
+		super();
+		this.favService = favService;
+	}
+	
+	
+	@PostMapping("/{email}/player")
+	public ResponseEntity<?> addPlayerToFavoriteList(@RequestBody Cplayer cplayer,
+													 @PathVariable String email) throws PlayerAlreadyExistsException {
+		System.out.println(cplayer);
+	
+		if(email!=null) {
+			try {
+				User user1 = favService.savePlayerToFavorite(cplayer, email);
+			//	System.out.println(user1);
+				if(user1.getEmail()!=null) {
+					responseEntity = new ResponseEntity<User>(user1, HttpStatus.CREATED);
+				}
+
+				else {
+					System.out.println("email not found...maybe its null");
+				}
+				
+			} catch (PlayerAlreadyExistsException e) {
+				throw new PlayerAlreadyExistsException();
+			} catch (Exception e) {
+				responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+
+			}
+			return responseEntity;
+			
+		}
+		else {
+			return null;
+		}
+
+		
+
+	}
+	
+	@DeleteMapping("/{email}/{player}")
+	public ResponseEntity<?> deleteFromList(@PathVariable String player, @PathVariable String email)
+			throws PlayerNotFoundException {
+
+		try {
+			User user1 = favService.deletePlayerFromFavorite(player, email);
+			responseEntity = new ResponseEntity<User>(user1, HttpStatus.OK);
+		} catch (PlayerNotFoundException e) {
+			throw new PlayerNotFoundException();
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+
+		}
+		return responseEntity;
+
+	}
+	
+	@GetMapping("/{email}/player")
+	public ResponseEntity<?> getPlayerList(@PathVariable String email) throws PlayerNotFoundException {
+
+		try {
+			List<Cplayer> playerList = favService.getPlayerList(email);
+			responseEntity = new ResponseEntity(playerList, HttpStatus.OK);
+		} catch (Exception e) {
+			responseEntity = new ResponseEntity(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+
+		}
+		return responseEntity;
+
+	}
+
+
+}
+
+
+
+

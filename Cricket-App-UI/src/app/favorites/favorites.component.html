@@ -1,0 +1,22 @@
+<app-header></app-header>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Player Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let players of favoritePlayers; let i = index">
+        <td>{{favoritePlayers[i].player}}</td>
+        <td>{{favoritePlayers[i].role}}</td>
+        <td><a (click)="onView(players.id)" style="cursor: pointer; color: blue">View </a>/
+          <a (click)="onDelete(favoritePlayers[i].player)" style="cursor: pointer; color: red">Delete</a></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

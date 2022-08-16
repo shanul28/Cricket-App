@@ -1,0 +1,5 @@
+package com.cplayer.jwt.api.service;
+
+public class CustomUserDetailsServiceTest {
+
+}

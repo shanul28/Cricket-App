@@ -1,0 +1,25 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1005&q=80");
+    
+    background-size: cover;
+   }
+   .f{
+    display: flex;
+    justify-content: space-evenly;
+   }
+   .container{
+    background-color: snow;
+  width: 300px;
+  border-radius: 25px;
+  border: 5px solid rgb(98, 233, 98);
+  padding: 45px;
+ 
+  height: 300px;
+   }
+   h1{
+text-align: start;
+   }
+   h3{
+    font-family:monospace;
+   }
+  

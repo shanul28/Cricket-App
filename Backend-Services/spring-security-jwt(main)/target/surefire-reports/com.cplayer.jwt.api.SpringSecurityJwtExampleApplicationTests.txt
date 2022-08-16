@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.cplayer.jwt.api.SpringSecurityJwtExampleApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.008 s - in com.cplayer.jwt.api.SpringSecurityJwtExampleApplicationTests

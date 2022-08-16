@@ -1,0 +1,19 @@
+.container{
+    margin-top: 30px;
+    padding: 20px;
+}
+h1{
+    text-align: center!important;
+}
+
+.col{
+    display: flex!important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0px;
+}
+
+.table{
+    border: 1px rgb(197, 208, 211) ;
+}

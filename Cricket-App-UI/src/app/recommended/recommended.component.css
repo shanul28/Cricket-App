@@ -1,0 +1,22 @@
+.f{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px 50px;
+  padding: 10px;
+}
+
+ .container{
+  background-color: rgba(190, 216, 230, 0.884);
+  width: 300px;
+  border-radius: 20px;
+  border: 0px solid rgb(29, 30, 32);
+  padding: 45px;
+
+ }
+
+ h1{
+  text-align:left;
+ }
+ h3{
+  font-family:monospace;
+ }

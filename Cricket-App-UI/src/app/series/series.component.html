@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container">
+    <div class="input-group w-25">
+      <input
+      id="table-filtering-search"
+      class="form-control searchTerm"
+      type="text"
+      name="searchTerm"
+      placeholder="Search"
+      [(ngModel)]="searchTerm"
+      (input)="search(searchTerm)"
+      />
+    </div><br/>
+    <table id="customers">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Start-Date</th>
+            <th scope="col">End-Date</th>
+            <th scope="col">Matches</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="
+            let team of allTeams
+            | searchFilter: searchTerm
+          ">
+          <td>{{team.name}}</td>
+          <td>{{team.startDate}}</td>
+          <td>{{team.endDate}}</td>
+          <td>{{team.matches}}</td>
+         
+          </tr>
+          </tbody>
+          </table>
+    </div>
