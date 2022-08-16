@@ -8,13 +8,14 @@ User can also change his/her user details like username or password.
    * https://api.cricapi.com This base API is used to fetch the details of cricket players and matches.
   
   ## Frontend: 
-    The Frontend part of this app is built on Angular.
+   * The Frontend part of this app is built on Angular.
    
   ## Backend:
-    The Backend part is built using Spring Boot on microservices architecture.
+   * The Backend part is built using Spring Boot on microservices architecture.
     
   ## Database:
-    MySQL database is used for storing user's credentials and MongoDB is used for storing Favourite players details.
+   * MySQL database is used for storing user's credentials. 
+   * MongoDB is used for storing Favourite players details.
   
   * for testing Junit and Mockito has been used in backend.
   * Docker is also used for Containarization.
