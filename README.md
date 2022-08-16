@@ -22,7 +22,7 @@ User can also change his/her user details like username or password.
    * MySQL database is used for storing user's credentials. 
    * MongoDB is used for storing Favourite players details.
   
- ** for testing Junit and Mockito has been used in backend.
- ** Docker is also used for Containarization.
+ * for testing Junit and Mockito has been used in backend.
+ * Docker is also used for Containarization.
    
    
