@@ -5,7 +5,7 @@ The Website has a feature of user login also and add to favourite option is also
 User can also change his/her user details like username or password.
 
   ## API: 
-   https://api.cricapi.com This base API is used to fetch the details of cricket players and matches.
+   * https://api.cricapi.com This base API is used to fetch the details of cricket players and matches.
   
   ## Frontend: 
     The Frontend part of this app is built on Angular.
