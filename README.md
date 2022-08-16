@@ -12,12 +12,17 @@ User can also change his/her user details like username or password.
    
   ## Backend:
    * The Backend part is built using Spring Boot on microservices architecture.
+   * There are 3 services: 
+      * UserAuthenticationService (JWT is used for Authentication and transferring data in compact way)
+      * FavouriteServices
+      * API GATEWAY service which is used to converge all the request at a single port.
+   * All the services are registered on EUREKA service discovery.
     
   ## Database:
    * MySQL database is used for storing user's credentials. 
    * MongoDB is used for storing Favourite players details.
   
-  * for testing Junit and Mockito has been used in backend.
-  * Docker is also used for Containarization.
+ ** for testing Junit and Mockito has been used in backend.
+ ** Docker is also used for Containarization.
    
    
