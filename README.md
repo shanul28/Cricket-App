@@ -29,9 +29,9 @@ User can also change his/her user details like username or password.
 
 ![Screenshot (9)](https://user-images.githubusercontent.com/44204130/184974437-ca2588d9-b2de-456d-9b6d-da1259fa97af.png)
 
-![WhatsApp Image 2022-07-31 at 10 28 53 AM](https://user-images.githubusercontent.com/44204130/184974590-edf6acfb-2d10-4d18-a5d2-ce0db24acc03.jpeg)
-
 ![WhatsApp Image 2022-07-31 at 10 27 59 AM](https://user-images.githubusercontent.com/44204130/184974597-82c97444-4f1a-43b0-9e9c-ea46064fb5f5.jpeg)
+
+![WhatsApp Image 2022-07-31 at 10 28 53 AM](https://user-images.githubusercontent.com/44204130/184974590-edf6acfb-2d10-4d18-a5d2-ce0db24acc03.jpeg)
 
 ![WhatsApp Image 2022-07-31 at 11 15 12 AM](https://user-images.githubusercontent.com/44204130/184975172-df2570c0-a64f-4921-b5b7-6b21a47662da.jpeg)
 
